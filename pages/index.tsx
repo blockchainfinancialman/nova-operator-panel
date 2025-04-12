@@ -1,8 +1,16 @@
+// pages/index.tsx
 export default function Home() {
   return (
-    <div className="text-center text-2xl p-12">
-      <h1>🚀 Nova Operator Dashboard is Live</h1>
-      <p className="text-gray-500 mt-2">Welcome to your AI-powered control panel.</p>
+    <div style={{
+      padding: '2rem',
+      fontFamily: 'sans-serif',
+      color: 'white',
+      background: '#0b0c10',
+      minHeight: '100vh'
+    }}>
+      <h1>🚀 NOVA Operator Control Panel</h1>
+      <p>Status: ✅ Online</p>
+      <p>Mission Log: BTC sniper system deployed. Monitoring all trades in real time.</p>
     </div>
   );
 }
