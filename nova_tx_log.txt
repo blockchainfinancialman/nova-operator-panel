@@ -1,0 +1,49 @@
+/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/justinricher/nova-operator-mode/nova_auto_transaction.py", line 48, in <module>
+    send_eth()
+  File "/Users/justinricher/nova-operator-mode/nova_auto_transaction.py", line 20, in send_eth
+    balance = web3.eth.get_balance(sender)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/eth/eth.py", line 424, in get_balance
+    return self._get_balance(account, block_identifier)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/module.py", line 101, in caller
+    (method_str, params), response_formatters = method.process_params(
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/method.py", line 237, in process_params
+    _apply_request_formatters(params, self.request_formatters(method)),
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/eth_utils/functional.py", line 47, in inner
+    return callback(fn(*args, **kwargs))
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/method.py", line 64, in _apply_request_formatters
+    formatted_params = pipe(params, request_formatters)
+  File "cytoolz/functoolz.pyx", line 685, in cytoolz.functoolz.pipe
+  File "cytoolz/functoolz.pyx", line 660, in cytoolz.functoolz.c_pipe
+  File "cytoolz/functoolz.pyx", line 523, in cytoolz.functoolz.Compose.__call__
+  File "cytoolz/functoolz.pyx", line 268, in cytoolz.functoolz.curry.__call__
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/abi.py", line 620, in map_abi_data
+    return pipe(data, *pipeline)
+  File "cytoolz/functoolz.pyx", line 685, in cytoolz.functoolz.pipe
+  File "cytoolz/functoolz.pyx", line 660, in cytoolz.functoolz.c_pipe
+  File "cytoolz/functoolz.pyx", line 268, in cytoolz.functoolz.curry.__call__
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/abi.py", line 655, in data_tree_map
+    return recursive_map(map_to_typed_data, data_tree)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/decorators.py", line 34, in wrapped
+    wrapped_val = to_wrap(*args)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/formatters.py", line 84, in recursive_map
+    items_mapped = map_collection(recurse, data)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/formatters.py", line 68, in map_collection
+    return datatype(map(func, collection))
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/formatters.py", line 82, in recurse
+    return recursive_map(func, item)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/decorators.py", line 34, in wrapped
+    wrapped_val = to_wrap(*args)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/formatters.py", line 85, in recursive_map
+    return func(items_mapped)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/abi.py", line 651, in map_to_typed_data
+    return ABITypedData(func(*elements))
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/normalizers.py", line 79, in wrapper
+    modified = to_wrap(type_str, data)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/normalizers.py", line 202, in abi_address_to_hex
+    validate_address(data)
+  File "/Users/justinricher/nova-operator-mode/nova_env/lib/python3.9/site-packages/web3/_utils/validation.py", line 169, in validate_address
+    raise InvalidAddress(f"ENS name: '{value}' is invalid.")
+web3.exceptions.InvalidAddress: ENS name: '0xYourSenderAddress' is invalid.
